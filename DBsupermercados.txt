@@ -64,7 +64,7 @@ SELECT * FROM Ventas WHERE monto_total > (SELECT AVG (monto_total) FROM Ventas)
 SELECT * FROM Ventas WHERE cod_sucursal = (SELECT cod_sucursal FROM Sucursales WHERE barrio = 'Liniers') 
 	AND MONTH (fecha) = 10;
 
-SELECT distinct count(cod_sucursal) FROM Ventas WHERE monto_total > 700 AND MONTH (fecha) = 09;
+SELECT distinct count(cod_sucursal) FROM Ventas WHERE monto_total > 1000 AND MONTH (fecha) = 09;
 
 SELECT cod_sucursal, monto_total FROM Ventas WHERE fecha >= '2019-11-01' AND fecha <= '2019-11-15' 
 	ORDER BY monto_total ASC; 
